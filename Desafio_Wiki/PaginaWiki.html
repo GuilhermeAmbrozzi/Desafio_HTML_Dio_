@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio Wiki</title>
+    <style>
+      /* Estilize o menu para que ele esteja oculto por padrão */
+      .menu {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Estilo para os itens do menu */
+      .menu a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      /* Estilize o botão do menu */
+      .menu-button {
+        background-color: #fffdfd;
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      .wiki-logo-icon {
+        width: 150px;
+        height: 50px;
+        margin: 0%;
+        vertical-align: middle;
+      }
+
+      #search-input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 10px;
+      }
+
+      .pesquisa-header-star {
+        display: inline-block;
+        vertical-align: middle;
+        float: right;
+      }
+
+      /* Estilize as palavras-chave encontradas */
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+      }
+      ul {
+        list-style-type: none; /* Remover o estilo de lista */
+        padding: 0; /* Remover o preenchimento padrão */
+        margin: 0px; /* Remover a margem padrão */
+        flex-direction: column;
+      }
+  
+      ul li {
+        display: inline-block;
+        margin:15px; /* Espaço entre os itens da lista */
+        
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="Button-menu-imagens-logo">
+        <!-- Botão do menu -->
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+        <!-- Image do logo -->
+        <a href="/Desafio_Wiki/PaginaWiki.html" class="wiki-logo">
+          <img
+            class="wiki-logo-icon"
+            src="/Desafio_Wiki/IMG_WIKI/Wiki-logo.png"
+            alt
+            aria-hidden="true"
+          />
+        </a>
+
+        <!-- Menu suspenso -->
+        <div class="menu" id="myMenu">
+          <a href="/Desafio_Wiki/Game_of_thrones.html">Game of Thrones</a>
+          <a href="/Desafio_Wiki/Grey's_Anatomy.html">Grey's Anatomy</a>
+          <a href="/Desafio_Wiki/The_Big_Bang_Theory.html">The Big Bang Theory</a>
+        </div>
+
+        <div class="pesquisa-header-star" alt="Campo de Pesquisa">
+          <!-- Campo de pesquisa -->
+          <input type="text" id="search-input" placeholder="Pesquisar..." />
+          <button onclick="searchPage()">Pesquisar</button>
+        </div>
+      </div><hr>
+    </header>
+    <main>
+        <div class="content">
+      <h1>BEM VINDO A WIKIPÉDIA</h1>
+
+      <H2>Sobre a Wikipédia</H2>
+
+      <p>A Wikipédia é um projeto de enciclopédia colaborativa, universal e multilíngue estabelecido na internet sob o princípio wiki. Tem como propósito fornecer um conteúdo livre, objetivo e verificável​​, que todos possam editar e melhorar. O projeto é definido pelos princípios fundadores e o conteúdo é disponibilizado sob a licença Creative Commons BY-SA e pode ser reutilizado sob a mesma licença, desde que respeitando os termos de uso. Todos podem publicar conteúdo on-line desde que criem uma conta e sigam as regras básicas, como verificabilidade ou notoriedade.</p>
+
+      <p>Todos os editores da Wikipédia são voluntários e integram uma comunidade colaborativa, sem um líder, onde coordenam esforços em projetos temáticos e espaços de discussão. Dentre as várias páginas de ajuda à disposição, estão as que explicam como criar um artigo ou editar um artigo. Em caso de dúvidas, não hesite em perguntar. Debates e comentários sobre os artigos são bem-vindos. As páginas de discussão servem para centralizar reflexões e avaliações sobre como melhorar o conteúdo da Wikipédia.</p>
+      
+      <p>Nosso projeto da Wikipédia em português não é necessariamente, nem principalmente, um projeto de tradução da versão inglesa. Temos como objetivo criar a nossa própria enciclopédia, mesmo que traduzindo e adaptando alguns artigos de outras línguas. Começamos no final do ano 2001 e, nessa altura, ocorreu uma fase de "recrutamento" de pessoas interessadas em participar, em grande ou pequena escala.</p>
+      
+      <p>As primeiras políticas e normas de criação de páginas e algumas regras de organização foram então criadas, tendo sido, essencialmente, transpostas da versão inglesa.
+
+        O mais importante a salientar é que isto não é um fórum de debates. É uma enciclopédia e portanto o conteúdo deve ser o mais imparcial de opiniões possível, sempre tentando entrar num consenso geral de ideias.
+        
+        Ajude-nos a divulgar o projeto e participe você também!</p><hr>
+    </div>
+    </main>
+    <footer>
+        <p>Esta página foi editada pela última vez às 03h36min de 31 de março de 2023.</p>
+
+        <p>Este texto é disponibilizado nos termos da licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt" target="_blank">Atribuição-CompartilhaIgual 4.0 Internacional (CC BY-SA 4.0) da Creative Commons;</a> pode estar sujeito a condições adicionais. Para mais detalhes, consulte as <a href="https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use" target="_blank">condições de utilização.</a></p>
+
+        <ul>
+            <li><a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Política de Privacidade</a> </li>
+            <li><a href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Aviso_geral">Avisos gerais</a> </li>
+            <li><a href="https://foundation.wikimedia.org/wiki/Policy:Universal_Code_of_Conduct">Código de conduta</a> </li>
+        </ul>
+
+    </footer>
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("myMenu");
+        if (menu.style.display === "block") {
+          menu.style.display = "none"; // Oculta o menu se estiver visível
+        } else {
+          menu.style.display = "block"; // Exibe o menu se estiver oculto
+        }
+      }
+
+      function searchPage() {
+        var searchTerm = document
+          .getElementById("search-input")
+          .value.toLowerCase();
+        var content = document.getElementById("content");
+        var paragraphs = content.getElementsByTagName("p");
+
+        for (var i = 0; i < paragraphs.length; i++) {
+          var paragraphText = paragraphs[i].textContent;
+          paragraphs[i].innerHTML = paragraphText.replace(
+            new RegExp(searchTerm, "gi"),
+            '<span class="highlight">$&</span>'
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

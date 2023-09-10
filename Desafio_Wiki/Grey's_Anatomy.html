@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio Wiki</title>
+    <style>
+      ul {
+        list-style-type: none; /* Remover o estilo de lista */
+        padding: 0; /* Remover o preenchimento padrão */
+        margin: 0px; /* Remover a margem padrão */
+        flex-direction: column;
+      }
+  
+      ul li {
+        display: inline-block;
+        margin:15px; /* Espaço entre os itens da lista */
+        
+      }
+      /* Estilize o menu para que ele esteja oculto por padrão */
+      .menu {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Estilo para os itens do menu */
+      .menu a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      /* Estilize o botão do menu */
+      .menu-button {
+        background-color: #fffdfd;
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      .wiki-logo-icon {
+        width: 150px;
+        height: 50px;
+        margin: 0%;
+        vertical-align: middle;
+      }
+
+      #search-input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 10px;
+      }
+
+      .pesquisa-header-star {
+        display: inline-block;
+        vertical-align: middle;
+        float: right;
+      }
+
+      /* Estilize as palavras-chave encontradas */
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="Button-menu-imagens-logo">
+        <!-- Botão do menu -->
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+        <!-- Image do logo -->
+        <a href="/Desafio_Wiki/PaginaWiki.html" class="wiki-logo">
+          <img
+            class="wiki-logo-icon"
+            src="/Desafio_Wiki/IMG_WIKI/Wiki-logo.png"
+            alt
+            aria-hidden="true"
+          />
+        </a>
+
+        <!-- Menu suspenso -->
+        <div class="menu" id="myMenu">
+          <a href="/Desafio_Wiki/Game_of_thrones.html">Game of Thrones</a>
+          <a href="/Desafio_Wiki/Grey's_Anatomy.html">Grey's Anatomy</a>
+          <a href="/Desafio_Wiki/The_Big_Bang_Theory.html">The Big Bang Theory</a>
+        </div>
+
+        <div class="pesquisa-header-star" alt="Campo de Pesquisa">
+          <!-- Campo de pesquisa -->
+          <input type="text" id="search-input" placeholder="Pesquisar..." />
+          <button onclick="searchPage()">Pesquisar</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="content">
+        <h1 id="inicio">Grey's Anatomy Suas Temporadas</h1>
+       <div class="sumario"></div>
+       <ul>
+        <li><a href="#secao1">Resumo</a></li>
+        <li><a href="#secao2">Grey's Anatomy (1.ª temporada)(2005)</a></li>
+        <li><a href="#secao3">Grey's Anatomy (2.ª temporada)(2005-2006)</a></li>
+        <li><a href="#secao4">Grey's Anatomy (3.ª temporada)(2006-2007)</a></li>
+        <li><a href="#secao5">Grey's Anatomy (4.ª temporada)(2007-2008)</a></li>
+      </ul>
+</div>
+
+<h2 id="secao1">Resumo</h2>
+<a href="#inicio">Voltar ao topo</a>
+        <p>
+          <strong>Grey's Anatomy</strong> (no Brasil, A Anatomia de Grey ou Grey's Anatomy - Portugal, Anatomia de Grey) é um drama médico norte-americano exibido no horário nobre da rede ABC. Seu episódio piloto foi transmitido pela primeira vez em 27 de março de 2005 nos Estados Unidos. A série foca na vida de médicos cirurgiões internos, residentes e atendentes; e como eles evoluem na sua profissão ao tentar manter a vida dos seus pacientes e nos seus relacionamentos pessoais. O título da série é uma brincadeira com Anatomia de Gray, um renomado livro de anatomia humana escrito por Henry Gray. A ideia original foi de Shonda Rhimes, que além de idealizadora é produtora executiva, juntamente com Betsy Beers, Mark Gordon, Krista Vernoff, Rob Corn, Mark Wilding e Allan Heinberg. Embora se passe no ficcional Grey Sloan Memorial Hospital (anteriormente Seattle Grace Mercy West) em Seattle, Washington, as gravações são realizadas principalmente em Los Angeles, Califórnia.
+        </p>
+
+        <p>
+          Grey's foi criado para ter diversidade racial, de acordo com a utilização de uma técnica de recrutamento do elenco que não leva em conta a raça. A série se passa em torno da vida da médica Meredith Grey, interpretada por Ellen Pompeo. O elenco original contava com nove atores principais: Ellen Pompeo, Sandra Oh, Katherine Heigl, Justin Chambers, T.R. Knight, Chandra Wilson, James Pickens Jr., Isaiah Washington e Patrick Dempsey. O mesmo sofreu grandes mudanças ao longo das temporadas, com a saída de muitos membros e a entrada de novos. Em sua décima sexta temporada, a série teve um elenco de dezesseis atores, incluindo quatro do elenco original, Ellen Pompeo, Justin Chambers, Chandra Wilson e James Pickens Jr
+        </p>
+
+        <p>
+          Grey's Anatomy é um dos dramas de melhor audiência nos Estados Unidos, apesar da queda nas últimas temporadas, estando entre os 10 melhores no ranking de audiência e sendo bem recebido pelos críticos durante o seu tempo de exibição, onde foi incluído entre os 10 melhores de várias listas de criticas em 2006. É considerado uma série de impacto significativo na cultura popular e recebeu vários prêmios, incluindo o prêmio de Melhor Série de Drama no Globo de Ouro de 2007, além de várias indicações ao Emmy, incluindo duas para Primetime de melhor série de drama. Foram produzidos diversos especiais, também lançados em DVD, e vários produtos relacionados ao seriado. Grey's Anatomy é o programa de horário nobre com maior duração atualmente exibido na ABC, e a série de horário nobre mais longa com script realizada pela ABC no geral. E, em 28 de fevereiro de 2019, se tornou a mais longa série de drama médico no horário nobre americano.
+        </p>
+        <hr />
+
+        <h2 id="secao2">1ª temporada (2005)</h2>
+        <label>Ver artigo principal: </label
+        ><a
+          href="https://pt.wikipedia.org/wiki/Grey%27s_Anatomy_(1.%C2%AA_temporada)"
+          target="_blank"
+          >Grey's Anatomy (1.ª temporada)(2005)</a
+        ><br>
+        <a href="#inicio">Voltar ao topo</a>
+
+        <p>
+          A ABC anunciou a primeira temporada de Grey's Anatomy no final de 2004 como um programa substituto de meio da temporada de Boston Legal. Foi originalmente programado para ficar no horário de Boston Legal por apenas quatro semanas, mas depois de receber altas avaliações permaneceu no horário para o restante da temporada. A primeira temporada estreou em 27 de março de 2005 e terminou em 22 de maio de 2005, contando com 9 episódios.
+        </p>
+
+        <hr />
+
+        <h2 id="secao3">2ª temporada (2005-2006)</h2>
+
+        <label>Ver artigo principal: </label><a href="https://pt.wikipedia.org/wiki/Grey%27s_Anatomy_(2.%C2%AA_temporada)" target="_blank">Grey's Anatomy (2.ª temporada)</a><br>
+        <a href="#inicio">Voltar ao topo</a>
+        <p>
+          A ABC renovou Grey's Anatomy para a segunda temporada. Os cinco primeiros episódios da segunda temporada foram originalmente programados para ir ao ar durante a primeira, mas a emissora decidiu encerrar a primeira temporada de Grey's Anatomy na mesma noite do final de Desperate Housewives. A segunda temporada estreou em 25 de setembro de 2005 e terminou em 15 de maio de 2006, contando com 27 episódios.
+        </p>
+        <hr>
+        <h2 id="secao4">3ª temporada (2006-2007)</h2>
+
+        <label>Ver artigo principal:</label><a href="https://pt.wikipedia.org/wiki/Grey%27s_Anatomy_(3.%C2%AA_temporada)" target="_blank">Grey's Anatomy (3.ª temporada)</a><br>
+        <a href="#inicio">Voltar ao topo</a>
+
+        <p>A ABC renovou Grey's Anatomy para a terceira temporada. Essa temporada foi realocada para o cobiçado horário de quinta-feira às 21:00 - um espaço que a série manteve até a temporada 10, a partir da temporada 11, o show passou para o horário das 20:00. O programa retornou para as 21:00 no meio da temporada 16. Sendo a quinta-feira, há anos, o dia mais competitivo da televisão americana, essa mudança, segundo muitos analistas e críticos, prova o enorme voto de confiança que a série tem da emissora. A mudança, entretanto, não foi impensada, pois a ABC já havia testado o potencial da série para às quintas-feiras em 9 de fevereiro de 2006, ao exibir, após o Super Bowl, o episódio "It's The End of the World". No dia 16 de fevereiro, a quinta-feira seguinte, a ABC repetiu a segunda parte desse arco, o episódio "(As We Know It)". Em ambos os dias, apesar de ter enfrentado gigantes do horário, como os seriados CSI e Without a Trace da CBS e o já tradicional seriado médico da NBC, ER, a série apresentou uma performance sólida, com as reprises mantendo, com segurança, o segundo lugar. Tal desempenho provavelmente foi essencial para que a emissora reposicionasse a série. A terceira temporada estreou em 21 de setembro de 2006 e terminou em 17 de maio de 2007, contando com 25 episódios.</p>
+        <hr>
+
+        <h2 id="secao5">4ª temporada (2007-2008)</h2>
+        <label>Ver artigo principal:</label><a href="https://pt.wikipedia.org/wiki/Game_of_Thrones_(4.%C2%AA_temporada)" target="_blank">Game of Thrones (4.ª temporada)</a><br>
+        <a href="#inicio">Voltar ao topo</a>
+
+        <p>A ABC renovou Grey's Anatomy para a quarta temporada em 15 de março de 2007. Ao contrário das outras temporadas, exceto a primeira, que foi ao ar no meio da temporada, a quarta temporada de Grey's Anatomy teve um número reduzido de episódios, devido à greve da dos roteiristas dos Estados Unidos entre 2007 a 2008, que causou a cessação da produção de fevereiro a abril, deixando o programa sem escritores durante esse tempo. Como o programa só produziu dez episódios antes do hiato de férias de inverno e transmitiu outro após o intervalo, o programa decidiu completar a temporada com seis novos episódios e retornou em 24 de abril de 2008. Apenas dezessete episódios foram produzidos dos vinte e três originalmente concebidos para a temporada. A quarta temporada estreou em 27 de setembro de 2007 e terminou em 22 de maio de 2008, contando com 17 episódios.</p><hr>
+      </div>
+    </main>
+    <footer>
+      <p>Esta página foi editada pela última vez às 03h36min de 31 de março de 2023.</p>
+
+      <p>Este texto é disponibilizado nos termos da licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt" target="_blank">Atribuição-CompartilhaIgual 4.0 Internacional (CC BY-SA 4.0) da Creative Commons;</a> pode estar sujeito a condições adicionais. Para mais detalhes, consulte as <a href="https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use" target="_blank">condições de utilização.</a></p>
+
+      <ul>
+          <li><a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Política de Privacidade</a> </li>
+          <li><a href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Aviso_geral">Avisos gerais</a> </li>
+          <li><a href="https://foundation.wikimedia.org/wiki/Policy:Universal_Code_of_Conduct">Código de conduta</a> </li>
+      </ul>
+
+  </footer>
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("myMenu");
+        if (menu.style.display === "block") {
+          menu.style.display = "none"; // Oculta o menu se estiver visível
+        } else {
+          menu.style.display = "block"; // Exibe o menu se estiver oculto
+        }
+      }
+
+      function searchPage() {
+        var searchTerm = document
+          .getElementById("search-input")
+          .value.toLowerCase();
+        var content = document.getElementById("content");
+        var paragraphs = content.getElementsByTagName("p");
+
+        for (var i = 0; i < paragraphs.length; i++) {
+          var paragraphText = paragraphs[i].textContent;
+          paragraphs[i].innerHTML = paragraphText.replace(
+            new RegExp(searchTerm, "gi"),
+            '<span class="highlight">$&</span>'
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio Wiki</title>
+    <style>
+      /* Estilize o menu para que ele esteja oculto por padrão */
+      .menu {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Estilo para os itens do menu */
+      .menu a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      /* Estilize o botão do menu */
+      .menu-button {
+        background-color: #fffdfd;
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      .wiki-logo-icon {
+        width: 150px;
+        height: 50px;
+        margin: 0%;
+        vertical-align: middle;
+      }
+      #search-input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 10px;
+      }
+      .pesquisa-header-star {
+        display: inline-block;
+        vertical-align: middle;
+        float: right;
+      }
+      .highligth {
+        background-color: yellow;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="Button-menu-imagens-logo">
+        <!-- Botão do menu -->
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+        <!--Image do logo-->
+        <a href="/Desafio_Wiki/PaginaWiki.html" class="wiki-logo">
+          <img
+            class="wiki-logo-icon"
+            src="/Desafio_Wiki/IMG_WIKI/Wiki-logo.png"
+            alt
+            aria-hidden="true"
+          />
+        </a>
+
+        <!-- Menu suspenso -->
+        <div class="menu" id="myMenu">
+          <a href="#">Item de Menu 1</a>
+          <a href="#">Item de Menu 2</a>
+          <a href="#">Item de Menu 3</a>
+        </div>
+
+        <div class="pesquisa-header-star" alt="Campo de Pesquisa">
+          <!-- Campo de pesquisa -->
+          <input type="text" id="search-input" placeholder="Pesquisar..." />
+          <button onclick="searchPage()">Pesquisar</button>
+        </div>
+
+      </div>
+    </header>
+   
+    <main>
+      <div id="content">
+        <h1>Game of Thrones</h1>
+
+        <p>
+          <strong>Game of Thrones</strong> é uma série de televisão
+          norte-americana criada por David Benioff e D. B. Weiss, baseada na
+          série de livros A Song of Ice and Fire de George R. R. Martin. Eleita
+          como a melhor série de TV do século XXI em 2020, numa votação popular
+          feita pela revista Digital Spy, Game of Thrones foi transmitida
+          originalmente pelo canal HBO entre 17 de abril de 2011 a 19 de maio de
+          2019. No elenco principal estão Peter Dinklage, Nikolaj Coster-Waldau,
+          Lena Headey, Emilia Clarke, Iain Glen, Michelle Fairley, Richard
+          Madden, Kit Harington, Sophie Turner, Maisie Williams, Isaac Hempstead
+          Wright, entre outros.
+        </p>
+
+        <p>
+          Ao longo de oito temporadas e mais de sessenta episódios, Game of
+          Thrones cobre o enredo dos primeiros cinco livros de Martin com certas
+          modificações e a adição de material não publicado com base na
+          descrição do autor de eventos futuros em seu universo literário. É um
+          das série mais caras da história da televisão, cujas filmagens
+          envolveram até quatro unidades paralelas de filmagem e a produção de
+          efeitos visuais exigiu a participação simultânea de até quatorze
+          estúdios em diferentes países. A série foi filmada no Canadá, na
+          Croácia, na Islândia, em Malta, em Marrocos, na Espanha, na Irlanda do
+          Norte, na Escócia e nos Estados Unidos.
+        </p>
+
+        <p>
+          Muito aguardada desde seus primeiros estágios de desenvolvimento, Game
+          of Thrones foi muito bem recebida pela crítica especializada. Certos
+          meios de comunicação, como The Washington Post, Time, The Hollywood
+          Reporter e Rolling Stone classificaram-na como uma das melhores séries
+          de televisão já feitas e os críticos elogiaram aspectos como suas
+          atuações, roteiros, efeitos especiais, sequências de batalha e música.
+          Sua primeira temporada foi indicada em vários prêmios, incluindo o
+          Emmy do Primetime de melhor série de drama e o Globo de Ouro de melhor
+          série dramática; Peter Dinklage, que interpreta Tyrion Lannister,
+          venceu o Emmy do Primetime de melhor ator coadjuvante em série
+          dramática e o Globo de Ouro de melhor ator coadjuvante em série de
+          televisão. A série também conquistou o Emmy de melhor projeto de
+          créditos principais, e possui uma das melhores notas entre os
+          telespectadores para séries em exibição no site IMDb. Game of Thrones
+          ganhou 59 Emmys, mais do que qualquer outra série de televisão.
+        </p>
+
+        <p>
+          A série entrou para o Livro de Recordes como a série dramática com a
+          maior transmissão simultânea ao redor do mundo. O número foi alcançado
+          graças ao segundo episódio da quinta temporada, intitulado "The House
+          of Black and White". Na sexta temporada da série, a emissora HBO
+          decidiu produzir um talk show para Game of Thrones, chamado After the
+          Thrones, assim como a emissora AMC fez com a série Breaking Bad,
+          produzindo um talk show chamado Talking Bad. Com o mesmo formato de
+          Thronecast e Talking Dead, o programa After the Thrones apresenta
+          recapitulações, comentários e teorias de Game of Thrones e é exibido
+          nas segundas-feiras pela HBO Now, HBO Go, HBO on Demand e pela própria
+          emissora HBO.
+        </p>
+      </div>
+    </main>
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("myMenu");
+        if (menu.style.display === "block") {
+          menu.style.display = "none"; // Oculta o menu se estiver visível
+        } else {
+          menu.style.display = "block"; // Exibe o menu se estiver oculto
+        }
+      }
+
+      function searchPage() {
+        var searchTerm = document
+          .getElementById("search-input")
+          .value.toLowerCase();
+        var content = document.getElementById("content");
+        var paragraphs = content.getElementsByTagName("p");
+
+        for (var i = 0; i < paragraphs.length; i++) {
+          var paragraphText = paragraphs[i].textContent;
+          paragraphs[i].innerHTML = paragraphText.replace(
+            new RegExp(searchTerm, "gi"),
+            '<span class="highlight">$&</span>'
+          );
+        }
+      }
+    </script>
+  </body>
+</html>
